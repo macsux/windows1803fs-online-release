@@ -3,8 +3,8 @@ trap { $host.SetShouldExit(1) }
 
 $BOSH_INSTALL_TARGET = Resolve-Path "${env:BOSH_INSTALL_TARGET}"
 
-$image_tag="1803"
-$image_name="micahyo/windows2016fs"
+$image_tag="kb"
+$image_name="macsux/windows2016fs"
 
 c:\var\vcap\packages\hydrate\hydrate.exe download -image $image_name -tag $image_tag -noTarball -outputDir "$BOSH_INSTALL_TARGET"
 if ($LastExitCode -ne 0) {
